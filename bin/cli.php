@@ -1,7 +1,12 @@
 <?php
+require 'vendor/autoload.php';
 
 
-class cli
-{
+use src\console\Start;
+use Symfony\Component\Console\Application;
 
-}
+$application = new Application();
+
+$application->add(new Start());
+
+$application->run();
